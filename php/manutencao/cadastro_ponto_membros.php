@@ -27,7 +27,7 @@
 
           $verifica = $dados['DATA_PONTO'] == $data_ponto;
 
-          if ( ($verifica == true) $$ (empty($dados['HORA_SAIDA'])) ){
+          if ( ($verifica == true) && (empty($dados['HORA_SAIDA'])) ){
 
             $_SESSION['alert'] = "<script>alert('Você já bateu seu ponto de entrada hoje. Bata sua saída primeiro.')</script>";
             header('Location: ../../index.php');
