@@ -50,11 +50,11 @@
 
         else if ($batida_ponto === "Bater Saída"){
 
-          $hora_entrada = explode(":",$dados['HORA_ENTRADA']);
-          $hora_saida = explode(":",$hora_saida);
+          $separador_entrada = explode(":",$dados['HORA_ENTRADA']);
+          $separador_saida = explode(":",$hora_saida);
 
-          $acumulador1 = ($hora_entrada[0] * 3600) + ($hora_entrada[1] * 60) + $hora_entrada[2];
-          $acumulador2 = ($hora_saida[0] * 3600) + ($hora_saida[1] * 60) + $hora_saida[2];
+          $acumulador1 = ($separador_entrada[0] * 3600) + ($separador_entrada[1] * 60) + $separador_entrada[2];
+          $acumulador2 = ($separador_saida[0] * 3600) + ($separador_saida[1] * 60) + $separador_saida[2];
           $resultado = $acumulador2 - $acumulador1;
 
           $hora_ponto = floor($resultado / 3600);
