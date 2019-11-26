@@ -3,3 +3,6 @@ ports:
     onOpen: open-browser
 tasks:
 - command: apache -m http.server 8080
+
+image: docker pull httpd
+  file: .gitpod./public-html/ /usr/local/apache2/htdocs/
