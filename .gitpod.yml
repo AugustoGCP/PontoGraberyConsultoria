@@ -2,4 +2,4 @@ ports:
   - port: 3000-8080
     onOpen: open-browser
 tasks:
-- command: mdbook serve --hostname 127.0.0.1
+- command: apache -m http.server 8080
