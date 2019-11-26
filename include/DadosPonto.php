@@ -66,12 +66,10 @@ if (isset($_SESSION['alert'])) {
 
           </tr>
         </thead>
-
-        <?php
-        $linha = 1;
-        while ($dados = $conex->fetch_array()) { ?>
-
-          <tbody>
+        <tbody>
+           <?php
+              $linha = 1;
+                while ($dados = $conex->fetch_array()) { ?>
             <tr>
               <th scope="row"><?php echo $linha; ?> </th>
               <td value="<?php echo $dados['NOME_MEMBRO'];?>"><?php echo $dados['NOME_MEMBRO']; ?>
@@ -79,8 +77,8 @@ if (isset($_SESSION['alert'])) {
               <td><?php echo $dados['CURSO_MEMBRO']; ?> </td>
               <td><button id="relatorio"class="btn btn-secondary btn-lg active relatorio" aria-pressed="true" onclick="nomeMembro()">Acessar Gerador</button></td>
             </tr>
-          <?php $linha += 1;} ?>
-          </tbody>
+            <?php $linha += 1;} ?>
+         </tbody>
       </table>
       <script> 
             function nomeMembro(){
