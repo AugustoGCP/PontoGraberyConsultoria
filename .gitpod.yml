@@ -2,5 +2,5 @@ ports:
   - port: 3000-8080
     onOpen: open-browser
     
-image: docker pull httpd
-  file: .gitpod./public-html/ /usr/local/apache2/htdocs/
+image: docker pull httpd:alpine
+  file: .gitpod.docker run -dit --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4
