@@ -75,10 +75,10 @@
             
           }else if((isset($dados['HORA_ENTRADA'])) && (isset($dados['DATA_PONTO']) == $data_ponto) && (isset($dados['HORA_SAIDA']))) {
             $_SESSION['alert'] = "<script>alert('Entrada batida com sucesso.')</script>";
-            $sql = "update tb_ponto_membro set HORA_SAIDA = '$hora_saida', TOTAL_HORAS = '$horas_total' where ID_MEMBRO = '$id_membro' and DATA_PONTO = '$data_ponto'";
+            $sql = "update tb_ponto_membro set HORA_SAIDA = '$hora_saida', TOTAL_HORAS = '$horas_total' where ID_MEMBRO = '$id_membro' and DATA_PONTO = '$data_ponto' AND HORA_SAIDA IS NULL";
           }else{
             $_SESSION['alert'] = "<script>alert('Saída batida com sucesso.')</script>";
-            $sql = "update tb_ponto_membro set HORA_SAIDA = '$hora_saida', TOTAL_HORAS = '$horas_total' where ID_MEMBRO = '$id_membro' and DATA_PONTO = '$data_ponto'";
+            $sql = "update tb_ponto_membro set HORA_SAIDA = '$hora_saida', TOTAL_HORAS = '$horas_total' where ID_MEMBRO = '$id_membro' and DATA_PONTO = '$data_ponto'";    
           }  
 
         }else{
